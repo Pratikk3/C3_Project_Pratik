@@ -86,13 +86,13 @@ class RestaurantTest {
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
     @Test
-    public void adding_items_should_return_amount_as_0(){
+    public void adding_items_should_return_amount_anything_other_than_0(){
         List<Item> items = new ArrayList<>();
         items.add(new Item("Noodles",50));
         items.add(new Item("Pasta",150));
         items.add(new Item("Lasagne",250));
         double amount = restaurant.getAmountForItems(items);
-        assertEquals(0,amount);
+        assertEquals(450,amount);
     }
 
     @Test
