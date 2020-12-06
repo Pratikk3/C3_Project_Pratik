@@ -76,7 +76,9 @@ public class Restaurant {
     }
 
     public double getAmountForItems(List<Item> selectedItems){
-
+        for(Item item: selectedItems){
+            amount += item.getPrice();
+        }
         return amount;
     }
 
